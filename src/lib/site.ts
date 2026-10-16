@@ -4,7 +4,7 @@ export const site = {
   tagline: "Where memes meet meaning.",
   description:
     "HopeCoin is a Solana charity meme coin. A global community of memes, culture, and support for children battling cancer.",
-  url: "https://hopecoin.xyz",
+  url: "https://gethopecoin.com",
   chain: "Solana",
   launchVenue: "Pump.fun",
   feeShare: "50%",
