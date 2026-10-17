@@ -47,7 +47,7 @@ export function Nav() {
         </a>
         <div className="shell flex h-[72px] items-center justify-between">
           <Logo />
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-5 xl:gap-8 lg:flex" aria-label="Primary">
             {nav.map((item) => (
               <Link
                 key={item.href}

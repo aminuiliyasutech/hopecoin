@@ -33,6 +33,9 @@ export default function TokenPage() {
         <Reveal>
           <div className="grid gap-3 sm:flex sm:flex-wrap">
             <BuyLink />
+            <Link href="/whitepaper" className="btn btn-ghost">
+              White paper
+            </Link>
             <Link href="/impact" className="btn btn-ghost">
               Public ledger
             </Link>

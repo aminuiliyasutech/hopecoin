@@ -50,6 +50,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/whitepaper" className="hover:text-ivory">
+                  White paper
+                </Link>
+              </li>
+              <li>
                 <Link href="/impact" className="hover:text-ivory">
                   Public ledger
                 </Link>
