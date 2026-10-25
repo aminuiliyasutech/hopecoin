@@ -17,8 +17,6 @@ import {
   whitepaperToc,
 } from "@/lib/whitepaper";
 
-/** Full white paper body — kept for later. Flip page.tsx when ready to publish. */
-
 function SectionHeading({
   id,
   number,
@@ -93,10 +91,10 @@ export function WhitepaperDocument() {
   return (
     <main>
       <PageHero
-        kicker="White Paper"
+        kicker={`White Paper — ${whitepaperMeta.versionLabel}`}
         title={whitepaperMeta.title}
         italic={whitepaperMeta.subtitle}
-        lede={`A working document for HopeCoin ($HOPE) — a community-driven Solana meme coin with a proposed ${site.feeShare} creator-fee allocation toward support for children battling cancer. Status: ${whitepaperMeta.status}.`}
+        lede={`HopeCoin ($HOPE) — a community-driven Solana meme coin with a proposed ${site.feeShare} creator-fee allocation toward support for children battling cancer. Status: ${whitepaperMeta.status}.`}
       />
 
       <section className="shell pb-12">

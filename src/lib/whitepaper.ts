@@ -2,7 +2,7 @@ export const whitepaperMeta = {
   title: "HopeCoin White Paper",
   subtitle: "Memes for Hope. Action for Kids.",
   status: "Pre-launch",
-  versionLabel: "Working white paper",
+  versionLabel: "Version 1.0",
 } as const;
 
 export const whitepaperToc = [
@@ -45,10 +45,10 @@ export const tokenParams = [
 ] as const;
 
 export const tokenDistribution = [
-  { label: "Public launch", share: "100%" },
-  { label: "Separate team allocation", share: "0%" },
-  { label: "Separate marketing allocation", share: "0%" },
-  { label: "Separate charity allocation", share: "0%" },
+  { label: "Public launch", share: "50%" },
+  { label: "Separate team allocation", share: "Not decided" },
+  { label: "Separate marketing allocation", share: "Not decided" },
+  { label: "Separate charity allocation", share: "Not decided" },
   { label: "Total", share: "100%" },
 ] as const;
 
