@@ -151,7 +151,7 @@ export function WhitepaperDocument() {
                     href="/impact"
                     className="btn btn-ghost !min-h-11 text-sm"
                   >
-                    Public ledger
+                    Fee share tracker
                   </Link>
                 </div>
               </nav>
@@ -970,7 +970,7 @@ export function WhitepaperDocument() {
                     View token details
                   </Link>
                   <Link href="/impact" className="btn btn-ghost">
-                    Public ledger
+                    Fee share tracker
                   </Link>
                 </div>
               </article>
