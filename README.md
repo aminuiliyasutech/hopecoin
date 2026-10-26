@@ -14,4 +14,15 @@ Official community:
 - [Telegram](https://t.me/+8-146Y-_7uAwMTE0)
 - [Instagram](https://www.instagram.com/hopecoin15)
 
-Add the Pump.fun URL, contract address, and donation rows in `src/lib/site.ts` when those are ready to publish.
+## Publishing live details
+
+Add the Pump.fun URL and contract address in `src/lib/site.ts` when ready.
+
+### Open-source donation tracker
+
+The Impact page hosts a Solana donation dashboard. Ledger rows and wallet
+addresses live in `src/lib/donations.ts` so anyone can audit them in git.
+
+1. Set `donationTracking.wallets.treasury` / `.charity` when addresses are public.
+2. Append a `donationRecords` entry after each gift (prefer a Solana `txSignature`).
+3. Statuses: `allocated` → `completed` → `acknowledged`.
