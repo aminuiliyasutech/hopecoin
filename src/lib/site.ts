@@ -8,8 +8,8 @@ export const site = {
   chain: "Solana",
   launchVenue: "Pump.fun",
   feeShare: "50%",
-  contractAddress: "",
-  pumpUrl: "",
+  contractAddress: "JChmfnfC9fovJL1rbciVenLSD5XjwN22dGRHrQmTpump",
+  pumpUrl: "https://pump.fun/coin/JChmfnfC9fovJL1rbciVenLSD5XjwN22dGRHrQmTpump",
   email: "",
   handles: {
     x: "@hopecoin15",
