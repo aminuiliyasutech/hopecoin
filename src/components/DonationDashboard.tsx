@@ -11,7 +11,6 @@ import { site } from "@/lib/site";
 
 export function DonationDashboard() {
   const stats = donationStats();
-  const sourceUrl = `${donationTracking.sourceRepo}/blob/main/${donationTracking.sourcePath}`;
 
   const cards = [
     {
@@ -38,7 +37,7 @@ export function DonationDashboard() {
       hint:
         donationRecords.length === 0
           ? "Will update when the first row is published."
-          : "Most recent entry in the open ledger.",
+          : "Most recent entry in the public ledger.",
     },
   ];
 
@@ -47,7 +46,7 @@ export function DonationDashboard() {
       <Reveal>
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
-            <p className="kicker">Open-source tracker</p>
+            <p className="kicker">Public tracker</p>
             <h2 className="display display-md mt-5 max-w-3xl">
               Donation dashboard.
             </h2>
@@ -56,13 +55,8 @@ export function DonationDashboard() {
               recipients, status, and explorer proofs anyone can verify.
             </p>
           </div>
-          <a
-            href={sourceUrl}
-            className="btn btn-ghost shrink-0"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View ledger source
+          <a href="#ledger" className="btn btn-ghost shrink-0">
+            Jump to ledger
           </a>
         </div>
       </Reveal>
@@ -91,7 +85,7 @@ export function DonationDashboard() {
               Track the money on Solana.
             </h3>
             <p className="mt-3 max-w-2xl leading-relaxed text-muted">
-              Live balances pull from Solana mainnet RPC. Explorer links open
+              Live balances pull from Solana mainnet. Explorer links open
               Solscan so the community can inspect activity independently.
             </p>
           </div>
@@ -101,7 +95,7 @@ export function DonationDashboard() {
         </Reveal>
       </div>
 
-      <div className="mt-16">
+      <div id="ledger" className="mt-16 scroll-mt-28">
         <Reveal>
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
@@ -124,39 +118,28 @@ export function DonationDashboard() {
       <Reveal>
         <div className="mt-16 grid gap-6 rounded-[1.8rem] bg-espresso px-7 py-10 text-ivory md:grid-cols-[1.2fr_0.8fr] md:px-10 md:py-12">
           <div>
-            <p className="kicker text-gold-soft">Open source</p>
+            <p className="kicker text-gold-soft">How to verify</p>
             <h3 className="mt-4 font-serif text-3xl tracking-tight">
-              The tracker lives in the repo.
+              Proofs live on Solana.
             </h3>
             <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-ivory/70">
-              Donation rows are maintained in{" "}
-              <code className="text-gold-soft">src/lib/donations.ts</code> on
-              GitHub. Anyone can audit changes, propose corrections, and follow
-              Solana transaction signatures to independent explorers.
+              Each completed gift will list amount, recipient, status, and a
+              Solscan transaction link when available. That explorer link is the
+              independent check — not a screenshot, not a promise.
             </p>
           </div>
           <div className="flex flex-col justify-end gap-3">
-            <a
-              href={donationTracking.sourceRepo}
-              className="btn border border-ivory/20 bg-transparent text-ivory hover:bg-ivory/10"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub repository
-            </a>
-            <a
-              href={sourceUrl}
-              className="btn border border-ivory/20 bg-transparent text-ivory hover:bg-ivory/10"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open donations.ts
-            </a>
             <Link
               href="/whitepaper#charity"
               className="btn border border-ivory/20 bg-transparent text-ivory hover:bg-ivory/10"
             >
               Read the 50% commitment
+            </Link>
+            <Link
+              href="/token"
+              className="btn border border-ivory/20 bg-transparent text-ivory hover:bg-ivory/10"
+            >
+              View token details
             </Link>
           </div>
         </div>
