@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Impact",
-  description: `${site.feeShare} of HopeCoin creator fees support children battling cancer. Open-source Solana donation tracking dashboard with public proofs.`,
+  description: `${site.feeShare} of HopeCoin creator fees support children battling cancer. Follow the public creator-fee share tracker on Solana.`,
 };
 
 export default function ImpactPage() {
@@ -18,9 +18,9 @@ export default function ImpactPage() {
     <main>
       <PageHero
         kicker="Impact"
-        title="Help you can"
+        title="Creator fees you can"
         italic="actually follow."
-        lede={`${site.feeShare} of creator fees support children battling cancer. An open-source Solana donation dashboard tracks every gift with public proofs.`}
+        lede={`${site.feeShare} of eligible creator fees are proposed for children’s cancer support. This page tracks how those fees are shared — with Solana proofs, not donation asks.`}
       />
 
       <section className="shell pb-20">
@@ -43,11 +43,10 @@ export default function ImpactPage() {
               <p className="mt-6 text-lg leading-relaxed text-muted">
                 We are not inventing a cause to decorate a token. The gold ribbon
                 is a symbol families already know. HopeCoin’s job is to treat it
-                with enough seriousness that a donation record can sit next to a
-                meme — and both still make sense.
+                seriously — by showing how creator fees are shared, in public.
               </p>
               <a href="#dashboard" className="link-quiet mt-8 text-sm">
-                Open the donation dashboard
+                Open the fee share tracker
                 <Arrow className="h-3 w-3" />
               </a>
             </div>
@@ -60,24 +59,24 @@ export default function ImpactPage() {
           <Reveal>
             <p className="kicker text-gold-soft">The path</p>
             <h2 className="display display-md mt-6 max-w-4xl">
-              Fees become gifts. Gifts become a line in the ledger.
+              Fees are shared. Shares are listed.
             </h2>
             <div className="mt-16 grid gap-12 md:grid-cols-3">
               {[
                 {
                   n: "01",
                   title: "Creator fees",
-                  body: `Trading $HOPE generates creator fees. ${site.feeShare} of those fees are directed to children’s cancer support.`,
+                  body: `Trading $HOPE generates creator fees. ${site.feeShare} of eligible fees are proposed for children’s cancer support.`,
                 },
                 {
                   n: "02",
-                  title: "Verified partner",
-                  body: "A charitable organization that works with children battling cancer receives the gift. Named only when verified.",
+                  title: "Verified destination",
+                  body: "The charity share goes to a verified organization that helps children battling cancer — named only when verified.",
                 },
                 {
                   n: "03",
-                  title: "Public record",
-                  body: "Every gift has a date, amount, destination, status, and Solana proof when available — tracked in the open dashboard below.",
+                  title: "Public fee record",
+                  body: "Each share lists date, amount, destination, status, and a Solana proof when available — so anyone can follow the fees.",
                 },
               ].map((item) => (
                 <article key={item.n}>

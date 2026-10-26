@@ -37,7 +37,7 @@ export default function TokenPage() {
               White paper
             </Link>
             <Link href="/impact" className="btn btn-ghost">
-              Public ledger
+              Fee share tracker
             </Link>
           </div>
         </Reveal>
@@ -66,12 +66,12 @@ export default function TokenPage() {
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
                 {site.feeShare} of creator fees support children battling
-                cancer, through a verified charitable partner. The path is
-                simple on purpose: trade generates fees, fees become gifts,
-                gifts are listed in the ledger.
+                cancer, through a verified destination. The path is simple on
+                purpose: trade generates fees, fees are shared, and every share
+                is listed in the public record.
               </p>
               <Link href="/impact" className="link-quiet mt-8 text-sm">
-                Follow every gift
+                Follow creator fee shares
                 <Arrow className="h-3 w-3" />
               </Link>
             </div>

@@ -26,9 +26,9 @@ const steps = [
   {
     n: "03",
     title: "Watch it matter",
-    body: `${site.feeShare} of creator fees support children battling cancer. Every gift is written into the public ledger.`,
+    body: `${site.feeShare} of creator fees support children battling cancer. Every fee share is written into the public record.`,
     href: "/impact",
-    label: "See the ledger",
+    label: "Follow creator fees",
   },
 ];
 
@@ -160,11 +160,11 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-lg leading-relaxed text-muted">
-              A verified charitable partner. A public ledger for every gift.
-              The joke can be loud. The record stays quiet, and exact.
+              A verified destination for the charity share of creator fees.
+              The joke can be loud. The fee record stays quiet, and exact.
             </p>
             <Link href="/impact" className="btn btn-ghost mt-8">
-              Open the ledger
+              Follow creator fees
               <Arrow />
             </Link>
           </Reveal>

@@ -33,22 +33,22 @@ export function DonationLedger() {
     return (
       <div className="overflow-hidden rounded-[1.8rem] border border-ink/10 bg-ivory">
         <div className="border-b border-ink/10 px-6 py-5 md:px-8">
-          <p className="kicker">Ledger</p>
+          <p className="kicker">Creator fees</p>
           <p className="mt-2 font-serif text-2xl tracking-tight">
-            Awaiting first verified gift
+            Awaiting first fee share
           </p>
         </div>
         <div className="px-6 py-10 md:px-8 md:py-12">
           <p className="max-w-2xl text-lg leading-relaxed text-muted">
-            Every completed donation will list date, amount, recipient, status,
-            and a Solana transaction proof when available. Until the first gift
-            is made and recorded in the open ledger, this table stays empty on
-            purpose.
+            When eligible creator fees are shared, each entry will list date,
+            amount, destination, status, and a Solana transaction proof when
+            available. Until the first share is recorded, this table stays empty
+            on purpose.
           </p>
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
             {[
               "Date & amount",
-              "Recipient & status",
+              "Destination & status",
               "Solscan proof",
             ].map((item) => (
               <div
@@ -72,7 +72,7 @@ export function DonationLedger() {
             <tr>
               <th className="px-5 py-4 font-semibold">Date</th>
               <th className="px-5 py-4 font-semibold">Amount</th>
-              <th className="px-5 py-4 font-semibold">Recipient</th>
+              <th className="px-5 py-4 font-semibold">Destination</th>
               <th className="px-5 py-4 font-semibold">Status</th>
               <th className="px-5 py-4 font-semibold">Proof</th>
             </tr>

@@ -18,11 +18,11 @@ Official community:
 
 Add the Pump.fun URL and contract address in `src/lib/site.ts` when ready.
 
-### Open-source donation tracker
+### Creator-fee share tracker
 
-The Impact page hosts a Solana donation dashboard. Ledger rows and wallet
-addresses live in `src/lib/donations.ts` so anyone can audit them in git.
+The Impact page hosts a Solana creator-fee share tracker. Rows and wallet
+addresses live in `src/lib/donations.ts`.
 
 1. Set `donationTracking.wallets.treasury` / `.charity` when addresses are public.
-2. Append a `donationRecords` entry after each gift (prefer a Solana `txSignature`).
+2. Append a `donationRecords` entry after each creator-fee share (prefer a Solana `txSignature`).
 3. Statuses: `allocated` → `completed` → `acknowledged`.

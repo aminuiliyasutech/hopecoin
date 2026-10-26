@@ -1,27 +1,26 @@
 /**
- * HopeCoin open-source donation ledger.
+ * HopeCoin creator-fee share ledger.
  *
- * This file is the public source of truth for charitable gifts attributed to
- * HopeCoin. Add a row when a donation is completed. Prefer a Solana transaction
- * signature so anyone can verify the transfer on-chain.
+ * Public record of how eligible creator-fee revenue is shared — especially the
+ * proposed 50% directed to children’s cancer support. Add a row when a share
+ * is allocated or transferred. Prefer a Solana transaction signature.
  *
- * Status meanings (aligned with the white paper):
- * - allocated  — designated for charity, not yet transferred
- * - completed  — funds transferred to a recipient
- * - acknowledged — recipient confirmed the gift (when available)
+ * Status meanings:
+ * - allocated  — share calculated / set aside, not yet transferred
+ * - completed  — share transferred on-chain
+ * - acknowledged — destination confirmed receipt (when available)
  */
 
 export const donationTracking = {
   chain: "Solana",
   explorerBase: "https://solscan.io",
   rpcUrl: "https://api.mainnet-beta.solana.com",
-  /** Repo where this ledger is maintained in the open. */
   sourceRepo: "https://github.com/aminuiliyasutech/hopecoin",
   sourcePath: "src/lib/donations.ts",
   /**
-   * Publish wallet addresses here when ready. Leave empty until verified.
-   * Treasury: holds eligible creator-fee revenue before allocation.
-   * Charity: outbound wallet used for verified charitable transfers.
+   * Publish wallet addresses when ready.
+   * Treasury: holds eligible creator-fee revenue before sharing.
+   * Charity: wallet used to send the charity share of creator fees.
    */
   wallets: {
     treasury: "",
@@ -37,29 +36,28 @@ export type DonationRecord = {
   date: string;
   amount: string;
   currency: string;
+  /** Where this creator-fee share went */
   recipient: string;
   status: DonationStatus;
-  /** Solana transaction signature when the gift moved on-chain */
+  /** Solana transaction signature when the share moved on-chain */
   txSignature?: string;
   proofLabel?: string;
-  /** Off-chain receipt or partner confirmation URL */
   proofUrl?: string;
   notes?: string;
 };
 
 /**
- * Public donation ledger. Newest first.
- * Example row (keep commented until a real gift exists):
+ * Creator-fee share rows. Newest first.
  *
  * {
- *   id: "hope-001",
+ *   id: "hope-fee-001",
  *   date: "2026-11-01",
  *   amount: "500",
  *   currency: "USDC",
  *   recipient: "Verified children’s cancer organization",
  *   status: "completed",
  *   txSignature: "5xampleSolanaSignature…",
- *   notes: "50% creator-fee allocation — Q4 tranche",
+ *   notes: "50% of eligible creator fees — Nov share",
  * }
  */
 export const donationRecords: DonationRecord[] = [];
@@ -95,17 +93,4 @@ export function donationStats(records: DonationRecord[] = donationRecords) {
     allocatedGifts: allocated.length,
     latestDate: records[0] ? formatDonationDate(records[0].date) : null,
   };
-}
-
-/** Legacy shape used by older site helpers — maps from the open ledger. */
-export function donationsAsLegacyRows() {
-  return donationRecords.map((row) => ({
-    date: formatDonationDate(row.date),
-    amount: `${row.amount} ${row.currency}`,
-    partner: row.recipient,
-    proofLabel: row.proofLabel || (row.txSignature ? "Solscan" : undefined),
-    proofUrl: row.txSignature
-      ? explorerTxUrl(row.txSignature)
-      : row.proofUrl,
-  }));
 }

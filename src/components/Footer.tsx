@@ -56,7 +56,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/impact" className="hover:text-ivory">
-                  Public ledger
+                  Fee share tracker
                 </Link>
               </li>
               {channels.map((item) => (
@@ -77,8 +77,8 @@ export function Footer() {
         <div className="mt-20 flex flex-col gap-8 border-t border-ivory/10 pt-8 text-sm text-ivory/42 md:flex-row md:items-end md:justify-between">
           <p className="max-w-2xl leading-relaxed">
             HopeCoin is a community meme coin on Solana. Nothing here is
-            financial advice. Tokens can lose value. Charity gifts are listed
-            in the public ledger as they are made.
+            financial advice. Tokens can lose value. Creator-fee shares are
+            listed in the public record as they are made.
           </p>
           <div className="flex flex-col items-start gap-4 md:items-end">
             <SocialLinks tone="ivory" />

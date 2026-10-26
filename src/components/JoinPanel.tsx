@@ -16,8 +16,8 @@ const nextSteps = [
   },
   {
     href: "/impact",
-    name: "Follow the ledger",
-    hint: "Half of creator fees support children battling cancer. Every gift is listed.",
+    name: "Follow creator fees",
+    hint: "Half of creator fees support children battling cancer. Every share is listed.",
   },
   {
     href: "/hopey",

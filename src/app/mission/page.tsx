@@ -59,9 +59,9 @@ export default function MissionPage() {
                 Those two things are not in conflict. They are the whole point.
               </p>
               <p>
-                Half of creator fees go to that support. A verified charitable
-                partner receives the gift. The public ledger is where you can
-                check.
+                Half of creator fees go to that support. A verified destination
+                receives the charity share. The fee share tracker is where you
+                can check.
               </p>
             </div>
           </Reveal>
@@ -88,7 +88,7 @@ export default function MissionPage() {
               },
               {
                 title: "Make a difference",
-                body: "Half of creator fees support children battling cancer. Records, not vibes. A ledger you can read.",
+                body: "Half of creator fees support children battling cancer. Records, not vibes. A fee share tracker you can read.",
               },
             ].map((item, index) => (
               <Reveal key={item.title} delay={index * 70}>
@@ -117,7 +117,7 @@ export default function MissionPage() {
           <div className="mt-10 flex flex-wrap items-center gap-5">
             <div className="flex flex-wrap gap-3">
               <Link href="/impact" className="btn btn-ink">
-                Public ledger
+                Fee share tracker
                 <Arrow />
               </Link>
               <Link href="/community#join" className="btn btn-ghost">

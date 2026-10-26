@@ -16,28 +16,28 @@ export function DonationDashboard() {
     {
       label: "Chain",
       value: donationTracking.chain,
-      hint: "All on-chain proofs resolve on Solana explorers.",
+      hint: "Creator-fee share proofs resolve on Solana explorers.",
     },
     {
-      label: "Fee commitment",
+      label: "Fee share",
       value: site.feeShare,
-      hint: "Of eligible creator-fee revenue toward charity.",
+      hint: "Of eligible creator-fee revenue toward children’s cancer support.",
     },
     {
-      label: "Gifts recorded",
+      label: "Shares recorded",
       value: String(stats.totalGifts),
       hint:
         stats.totalGifts === 0
-          ? "Ledger is live. First gift pending."
+          ? "Tracker is live. First share pending."
           : `${stats.completedGifts} completed · ${stats.allocatedGifts} allocated`,
     },
     {
-      label: "Latest gift",
+      label: "Latest share",
       value: stats.latestDate ?? "—",
       hint:
         donationRecords.length === 0
-          ? "Will update when the first row is published."
-          : "Most recent entry in the public ledger.",
+          ? "Updates when the first creator-fee share is published."
+          : "Most recent creator-fee share in the public record.",
     },
   ];
 
@@ -46,17 +46,18 @@ export function DonationDashboard() {
       <Reveal>
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
-            <p className="kicker">Public tracker</p>
+            <p className="kicker">Creator fees</p>
             <h2 className="display display-md mt-5 max-w-3xl">
-              Donation dashboard.
+              Fee share tracker.
             </h2>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-              A public Solana ledger for HopeCoin’s charitable gifts — amounts,
-              recipients, status, and explorer proofs anyone can verify.
+              Follow how HopeCoin shares eligible creator fees — amounts,
+              destinations, status, and Solana proofs. This is fee transparency,
+              not a donation ask.
             </p>
           </div>
           <a href="#ledger" className="btn btn-ghost shrink-0">
-            Jump to ledger
+            Jump to fee record
           </a>
         </div>
       </Reveal>
@@ -82,11 +83,11 @@ export function DonationDashboard() {
           <div className="mb-8">
             <p className="kicker">Wallets</p>
             <h3 className="mt-4 font-serif text-3xl tracking-tight">
-              Track the money on Solana.
+              Follow the creator fees on Solana.
             </h3>
             <p className="mt-3 max-w-2xl leading-relaxed text-muted">
               Live balances pull from Solana mainnet. Explorer links open
-              Solscan so the community can inspect activity independently.
+              Solscan so anyone can inspect fee activity independently.
             </p>
           </div>
         </Reveal>
@@ -99,14 +100,14 @@ export function DonationDashboard() {
         <Reveal>
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <p className="kicker">Public ledger</p>
+              <p className="kicker">Fee share record</p>
               <h3 className="mt-4 font-serif text-3xl tracking-tight">
-                Every gift, in one place.
+                Every creator-fee share, listed.
               </h3>
             </div>
             <p className="max-w-sm text-sm leading-relaxed text-muted">
-              Allocated is not completed. Completed is not acknowledged until
-              the recipient confirms.
+              Allocated means set aside. Completed means transferred.
+              Acknowledged means confirmed by the destination.
             </p>
           </div>
         </Reveal>
@@ -123,9 +124,9 @@ export function DonationDashboard() {
               Proofs live on Solana.
             </h3>
             <p className="mt-5 max-w-xl text-[1.05rem] leading-relaxed text-ivory/70">
-              Each completed gift will list amount, recipient, status, and a
-              Solscan transaction link when available. That explorer link is the
-              independent check — not a screenshot, not a promise.
+              Each completed creator-fee share will list amount, destination,
+              status, and a Solscan transaction link when available. That
+              explorer link is the independent check.
             </p>
           </div>
           <div className="flex flex-col justify-end gap-3">

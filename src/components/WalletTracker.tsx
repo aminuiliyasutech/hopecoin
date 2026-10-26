@@ -14,12 +14,12 @@ const labels: Record<
   { title: string; hint: string }
 > = {
   treasury: {
-    title: "Treasury wallet",
-    hint: "Eligible creator-fee revenue before allocation.",
+    title: "Creator-fee wallet",
+    hint: "Eligible creator-fee revenue before it is shared.",
   },
   charity: {
-    title: "Charity wallet",
-    hint: "Outbound wallet for verified charitable transfers.",
+    title: "Fee-share wallet",
+    hint: "Wallet used to send the charity share of creator fees.",
   },
 };
 
@@ -140,9 +140,8 @@ export function WalletTracker() {
           Solana addresses publish here first.
         </h3>
         <p className="mt-4 max-w-2xl leading-relaxed text-muted">
-          When treasury and charity wallets are ready, their addresses and live
-          SOL balances will appear on this dashboard with Solscan links anyone
-          can check.
+          When creator-fee wallets are ready, their addresses and live SOL
+          balances will appear here with Solscan links anyone can check.
         </p>
       </div>
     );
